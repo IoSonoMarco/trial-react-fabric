@@ -1,13 +1,174 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: 
+    translateX(-50%)
+    translateY(-50%);
+  width: 60%;
+  height: 600px;
+  border: solid 1px black;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 5px;
 }
+
+.sidebar {
+  width: 150px;
+  height: 100%;
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 15px;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.canvas__container {
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.canvas__box {
+  border: solid 1px black;
+  width: 500px;
+  height: 500px;
+}
+
+button {
+  width: 100%;
+  outline: none;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgba(118, 0, 0, 0.54);
+  color: white;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: rgba(118, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+button:active {
+  background-color: rgba(118, 0, 0, 1);
+}
+
+.toggled {
+  background-color: rgba(118, 0, 0, 1);
+  box-shadow: inset 0 0 10px white;
+}
+
+.toggled:hover {
+  background-color: rgba(118, 0, 0, 1);
+}
+
+.draw__button {
+  width: 100%;
+}
+
+.spawn__button {
+  width: 100%;
+}
+
+.polygon__button {
+  width: 100%;
+}
+
+.color__picker {
+  width: 100%;
+  padding: 2px;
+  margin-top: -8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.color__option {
+  width: 30px;
+  height: 20px;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.1s;
+  opacity: 0.4;
+}
+
+.color__option:hover {
+  width: 35px;
+  opacity: 1;
+  cursor: pointer;
+  border: solid 1px black;
+}
+
+.color__red {
+  background-color: red;
+}
+
+.color__green {
+  background-color: green;
+}
+
+.color__toggled {
+  opacity: 1;
+  width: 35px;
+  box-shadow: inset 0 0 5px white;
+}
+
+.save {
+  background-color: rgba(0, 128, 124, 0.536);
+}
+.save:hover {
+  background-color: rgba(0, 128, 124, 0.8);
+}
+.save:active {
+  background-color: rgba(0, 128, 124, 1);
+}
+
+form {
+  width: 100%;
+  background-color: rgba(0,0,0,0.1);
+  text-align: center;
+  margin-top: 30px;
+  border-radius: 8px;
+  padding: 5px 0;
+}
+form:hover {
+  background-color: rgba(0,0,0,0.4);
+  color: white;
+}
+label {
+  width: 100%;
+  height: 100%;
+  font-weight: 500
+}
+label:hover {
+  cursor: pointer;
+}
+input {
+  display: none;
+}
+
+
+
+
+
